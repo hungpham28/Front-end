@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>W3_Ban</title>
+  
+  <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+  <div id="main">
+    <!-- navigation-header -->
+    <div id="nav-header">
+      <ul class="navigation">
+        <li><a href="#" class="nav nav--home">HOME</a></li>
+        <li><a href="#about" class="nav nav--band">BAND</a></li>
+        <li><a href="#tour-dates" class="nav nav--tour">TOUR</a></li>
+        <li><a href="#contact" class="nav nav--contact">CONTACT</a></li>
+        <li>
+          <a class="nav nav--more">MORE
+          <i class="fa fa-angle-down" style="font-size: 18px;"></i>
+          </a>
+          <ul class="more--menu">
+            <li><a href="#">Merchandise</a></li>
+            <li><a href="#">Extras</a></li>
+            <li><a href="#">Media</a></li>
+          </ul>
+        </li>
+      </ul>
+      <div class="search--button"><i class="fa fa-search"></i></div>
+    </div>
+      <!-- end-header -->
+    <!-- slider -->
+    <div id="slider" >
+        <div class="mySlides">
+          <img src=".\assets\images\slider\la.jpg" style="width:100%">
+          <div  class="mySlides--content">
+            <h3>Los Angeles</h3>
+            <p>We had the best time playing at Venice Beach!</p>
+          </div>
+        </div>
+        <div class="mySlides">
+          <img src=".\assets\images\slider\ny.jpg" style="width:100%">
+          <div  class="mySlides--content">
+            <h3>New York</h3>
+            <p>The atmosphere in New York is lorem ipsum.</p>
+          </div>
+        </div>
+        <div class="mySlides">
+          <img src=".\assets\images\slider\chicago.jpg" style="width:100%">
+          <div  class="mySlides--content">
+            <h3>Chicago</h3>
+            <p>Thank you, Chicago - A night we won't forget.</p>
+          </div>
+        </div>
+        <div class="clear"></div>
+    </div>
+    <script>
+      var myIndex = 0;
+      carousel();
+      
+      function carousel() {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+        for (i = 0; i < x.length; i++) {
+          x[i].style.display = "none";  
+        }
+        myIndex++;
+        if (myIndex > x.length) {myIndex = 1}    
+        x[myIndex-1].style.display = "block";  
+        setTimeout(carousel, 3000); // Change image every 2 seconds
+      }
+      </script>
+    <!-- end-slider -->
+    <!-- content -->
+    <div id="content">
+      <div id="about">
+        <h2 class="content--about about--band">THE BAND</h2>
+        <p class="content--about about--intro">We love music</p>
+        <p class="content--about about--description">We have created a fictional band website. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <div class="content--about  members">
+          <div class="team members--person1">
+            <p>Name</p>
+            <img src=".\assets\images\content\about\bandmember.jpg" alt=""  style="width: 100%;">
+          </div>
+          <div class="team members--person2">
+            <p>Name</p>
+            <img src=".\assets\images\content\about\bandmember.jpg" alt=""  style="width: 100%;">
+          </div>
+          <div class="team members--person3">
+            <p>Name</p>
+            <img src=".\assets\images\content\about\bandmember.jpg" alt=""  style="width: 100%;">
+          </div>
+        </div>
+
+      </div>
+
+      <div id="tour-dates">
+        <div class="book--tour">
+          <h2>TOUR DATES</h2>
+          <p>Remember to book your tickets!</p>
+          <ul class="booking">
+            <li>
+              September
+              <span class="status--ticket--over">Sold out</span>
+            </li>
+            <li>
+              October
+              <span class="status--ticket--over">Sold out</span>
+            </li>
+            <li>
+              November
+              <span class="status--ticket--still">3</span>
+            </li>
+            <div class="buy--ticket">
+              <div class="tickets ticket--newyork">
+                <img src=".\assets\images\content\tour dates\newyork.jpg" style="width: 100%;" alt="">
+                <div class="ticket--content content--newyork">
+                  <p class="name--ticket">New York</p>
+                  <p class="dates--ticket">Fri 27 Nov 2016</p>
+                  <p class="description--ticket">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
+                  <button class="btn btn--buyticket js--btn--buyticket">Buy Tickets</button>
+                </div>
+              </div>
+              <div class="tickets ticket--paris">
+                <img src=".\assets\images\content\tour dates\paris.jpg" style="width: 100%;" alt="">
+                <div class="ticket--content content--paris">
+                  <p class="name--ticket">Paris</p>
+                  <p class="dates--ticket">Sat 28 Nov 2016</p>
+                  <p class="description--ticket">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
+                  <button class="btn btn--buyticket js--btn--buyticket">Buy Tickets</button>
+                </div>
+              </div>
+              <div class="tickets ticket--san">
+                <img src=".\assets\images\content\tour dates\sanfran.jpg" style="width: 100%;" alt="">
+                <div class="ticket--content content--san">
+                  <p class="name--ticket">San Francisco</p>
+                  <p class="dates--ticket">Sun 29 Nov 2016</p>
+                  <p class="description--ticket">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
+                  <button class="btn btn--buyticket js--btn--buyticket">Buy Tickets</button>
+                </div>
+              </div>
+            </div>
+          </ul>
+        </div>
+      </div>
+
+      <div id="contact">
+        <div class="container--contact">
+          <div class="content--contact contact--header">
+            <h2 class="header--contact">CONTACT</h2>
+            <p class="description--contact">Fan? Drop a note!</p>
+          </div>
+          <div class="content--contact contact--form">
+            <div class="content--form info">
+              <i class="fa fa-map-marker"></i>Chicago, US
+              <br>
+              <i class="fa fa-phone"></i>Phone: +00 151515
+              <br>
+              <i class="fa fa-envelope"></i>Email: mail@mail.com
+              <br>
+            </div>
+            <div class="content--form user">
+              <div class="line1">
+                <div class="column"><input  type="text" placeholder="Name" required name="Name" style="width: 100%;"></div>
+                <div class="column"><input  type="text" placeholder="Email" required name="Email" style="width: 100%;"></div>
+              </div>
+              <input class="line2" type="text" style="width: 100%;" placeholder="Message" required name="Message">
+              <br>
+              <button class="Send">SEND</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="image">
+        <img class="map" src=".\assets\images\map\map.jpg" alt="">
+      </div>
+    </div>
+    <!-- end-content -->
+  </div>
+  <div id="footer">
+    <div class="icon--company" >
+      <i class="fa fa-facebook-official" ></i>
+      <i class="fa fa-instagram" ></i>
+      <i class="fa fa-snapchat-square" ></i>
+      <i class="fa fa-pinterest-p" ></i>
+      <i class="fa fa-twitter" ></i>
+      <i class="fa fa-linkedin" ></i>
+      <br>
+      <p style="opacity: 0.5;">Powered by <a href="https://www.w3schools.com/w3css/default.asp" style="color:inherit ;">w3.css</a> </p>
+    </div>
+  </div>
+  <div class="modal js--modal">
+    <div class="modal--buyticket js--modal--buyticket">
+      <div class="header--modal">
+        <h2 class="title--ticket"><i class="fa fa-suitcase" ></i>  Tickets</h2>
+        <span class="header--iconclose js--close--pay"><i class="fa fa-times" style="font-size: 18px; " ></i></span>
+      </div>
+      <div class="body--modal">
+        <p class="modal--content--form" ><i class="fa fa-shopping-cart"></i> Tickets, $15 per person</p>
+        <input class="content--info" type="text" placeholder="How many?">
+        <p class="modal--content--form"><i class="fa fa-user"></i> Send To</p>
+        <input class="content--info" type="text" placeholder="Enter email">
+        <div class="btn btn--pay"><p style="padding: 16px;">PAY <i class="fa fa-check"></i></p></div>
+        <div class="end--modal">
+          <div class="btn btn--close_buy js--close--pay"><p style="padding: 8px; margin: 0; ">Close <i class="fa fa-times" ></i></div>
+          <div class="need--help"><p>Need <a href="#" style="color: #2196F3;">heplp?</a></p></div>   
+        </div> 
+      </div>
+    </div>
+    </div>
+    
+  <script>
+    const buyBtns=document.querySelectorAll('.js--btn--buyticket')
+    const modal=document.querySelector('.js--modal')
+    const formpay=document.querySelector('.js--modal--buyticket')
+    const closepays=document.querySelectorAll('.js--close--pay')
+    function showbuyticket(){
+      modal.classList.add('open')
+    }
+    function hidebuyticket(){
+      modal.classList.remove('open')
+    }
+    for(const buyBtn of buyBtns){
+      buyBtn.addEventListener('click',showbuyticket)
+    }
+    for(const closepay of closepays){
+      closepay.addEventListener('click',hidebuyticket)
+    }
+    modal.addEventListener('click',hidebuyticket)
+    formpay.addEventListener('click',function (event){
+      event.stopPropagation()
+    })
+    
+
+  </script>
+</body>
+</html>
+
+
